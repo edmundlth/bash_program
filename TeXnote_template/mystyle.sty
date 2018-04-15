@@ -1,0 +1,115 @@
+\ProvidesPackage{mystyle}
+
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{amsmath, amssymb, mathtools}
+\usepackage{bbm}
+\usepackage{array}
+\usepackage{mdframed}
+\usepackage{tikz} 
+\usepackage{tikz-cd} 
+
+% Hyperref styles 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+\usepackage{cleveref} %clever cross-referencing 
+% (NOTE: cleveref must the be loaded last among packages that does referencing, e.g. hyperref)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Style Choices
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength\parindent{0pt}
+
+
+\usepackage[explicit]{titlesec}
+%\titleformat{\section}{\normalfont\Large\bfseries}{}{0em}{#1\ \thesection}
+%\titlelabel{\thetitle} % "original" format beside \thetitle
+%\renewcommand\thesection{\arabic{section}}
+%\renewcommand{\theproposition}{\arabic{section}.\arabic{prop}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New command
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\norm[1][\cdot]{\left\lVert#1\right\rVert}
+\newcommand\Lim[1][n]{\lim_{#1 \to \infty}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\inprod}[1][\cdot , \cdot]{\left\langle #1 \right\rangle}
+\newcommand{\brac}[1]{\left(#1\right)}
+\newcommand{\wh}{\, |\, }
+\newcommand{\abs}[1]{\left|\, #1\,\right|}
+\newcommand{\p}{\partial} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Graphics and captions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx} 
+\graphicspath{{./images/}} % Location of the graphics files
+\usepackage[font=normal,labelfont=bf, margin=5pt]{caption} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Defining theorem environments 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsthm}
+\theoremstyle{plain}% default
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{claim}{Claim}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{exmp}{Example}[section]
+
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\newtheorem*{note}{Note}
+\newtheorem*{case}{Case}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Framed theorem environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{ftheorem}{\begin{mdframed}\begin{theorem}}
+  {\end{theorem}\end{mdframed}}
+\newenvironment{flemma}{\begin{mdframed}\begin{lemma}}
+  {\end{lemma}\end{mdframed}}
+\newenvironment{fprop}{\begin{mdframed}\begin{proposition}}
+  {\end{proposition}\end{mdframed}}
+\newenvironment{fdef}{\begin{mdframed}\begin{definition}}
+  {\end{definition}\end{mdframed}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Style choices 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definitions and New commands 
+%%%%%%%%%%%%%%%%%%%%%
+\def\R{{\ensuremath {\mathbb R}}}
+\def\Q{{\ensuremath {\mathbb Q}}}
+\def\C{{\ensuremath {\mathbb C}}}
+\def\N{{\ensuremath {\mathbb N}}}
+\def\Z{{\ensuremath {\mathbb Z}}}
+\def\B{{\ensuremath {\cal B}}}
+\def\A{{\ensuremath {\cal A}}}
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+#! /bin/bash
+
+TEMPLATE_PATH="/Users/edmundlau/bash_program/TeXnote_template"
+
+TEX="/Applications/TeX/TeXShop.app"
+NAME="$1"
+FILENAME="$1.tex"
+
+
+cp -R $TEMPLATE_PATH ./$NAME
+cd $NAME
+mv main.tex $FILENAME
+open -a $TEX $FILENAME
+open -a $TEX mystyle.sty

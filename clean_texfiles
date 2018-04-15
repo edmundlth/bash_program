@@ -1,0 +1,7 @@
+#! /bin/bash
+
+FILES=$(ls *.log *.out *.toc *.synctex.gz* *.blg *.aux *.lof *.lot .DS_store)
+for f in $FILES; do
+    echo Move to trash: $f
+    mv $f ~/.Trash
+done
